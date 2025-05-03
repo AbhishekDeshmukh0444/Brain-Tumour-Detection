@@ -20,15 +20,6 @@ This project presents a dual-module system for detecting brain tumors in MRI sca
 - Predicts presence of a tumor using a trained deep learning model.
 - Displays enhanced image and prediction result to the user.
 
-## 🧠 Technologies Used
-
-- **Programming Language**: Python  
-- **Frameworks & Libraries**:
-  - Flask (for web app)
-  - OpenCV, NumPy (for image processing)
-  - TensorFlow / Keras (for deep learning)
-  - Matplotlib, scikit-learn (for evaluation metrics)
-
 ## 📁 Dataset
 
 The dataset consists of MRI images with trained and tested images labeled as "Glioma","Meningioma","Pituitary" and "No Tumor". Preprocessing steps include:
@@ -36,39 +27,94 @@ The dataset consists of MRI images with trained and tested images labeled as "Gl
 - Normalization
 - Data augmentation (if applicable)
 
-## 🛠️ Installation
+## 📦 Software Requirements
 
-1. **Clone the repository**  
-   ```bash
-   git clone https://github.com/AbhishekDeshmukh0444/Brain-Tumour-Detection.git
-   cd Brain-Tumour-Detection
-   ```
+- **Python 3.8+**
+- **Operating System**: Windows 10/11, Linux (Ubuntu 20.04+), or macOS
+- **Libraries/Frameworks**:
+  - Flask
+  - TensorFlow / Keras
+  - NumPy
+  - OpenCV
+  - scikit-learn
+  - Matplotlib
 
-2. **Create a virtual environment (optional)**  
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
+To install all dependencies, run:
+```bash
+pip install -r requirements.txt
+```
 
-3. **Install dependencies**  
-   ```bash
-   pip install -r requirements.txt
-   ```
+## 💻 Hardware Requirements
 
-4. **Run the Flask app**  
-   ```bash
-   python app.py
-   ```
+- Minimum 4 GB RAM (8 GB recommended)
+- Intel i3 processor or equivalent (i5 or above recommended)
+- GPU (optional, for faster model inference)
+- Disk Space: ~1 GB for models and data
 
-5. **Access the web app**  
-   Open your browser and go to `http://localhost:5000`
+---
 
-## 🧪 Evaluation Metrics
+## 🚀 How to Execute the Code
 
-- **Accuracy**: 95.88 % 
-- **Precision**:95%
-- **Recall**: 95%  
-- **F1 Score**: 95%
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/AbhishekDeshmukh0444/Brain-Tumour-Detection.git
+cd Brain-Tumour-Detection
+```
+
+### 2. Set Up the Environment (Optional but Recommended)
+
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the Flask App
+
+```bash
+python app.py
+```
+
+Then open your browser and go to:  
+```
+http://127.0.0.1:5000
+```
+
+### 5. Upload MRI Scan
+
+- Upload an MRI image via the interface.
+- The system enhances the image and predicts:
+  - **Glioma Tumor**
+  - **Meningioma Tumor**
+  - **Pituitary Tumor**
+  - **No Tumor**
+
+---
+
+## 🧪 Model Summary
+
+- **Input**: 128x128 RGB MRI image
+- **Architecture**: CNN with multiple convolution + pooling layers
+- **Output**: Softmax layer for 4-class classification
+- **Training**: Categorical Crossentropy loss with Adam optimizer
+
+---
+
+## 📈 Sample Evaluation Metrics
+
+| Tumor Type       | Precision | Recall | F1 Score |
+|------------------|-----------|--------|----------|
+| Glioma           | 94.1%     | 95.0%  | 94.5%    |
+| Meningioma       | 92.6%     | 93.2%  | 92.9%    |
+| Pituitary Tumor  | 96.8%     | 95.7%  | 96.2%    |
+| No Tumor         | 97.1%     | 96.4%  | 96.7%    |
+
 
 ## 📷 Sample Output
 ![D:\8th_sem\IACV_Project\G4](Sample.png)
