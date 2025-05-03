@@ -70,13 +70,11 @@ The dataset consists of MRI images with trained and tested images labeled as "Gl
 - **Recall**: 95%  
 - **F1 Score**: 95%
 
-_(Replace these with actual values from your evaluation)_
-
 ## 📷 Sample Output
-![alt text](image.png)
+![D:\8th_sem\IACV_Project\G4](Sample.png)
 - Upload MRI image  
 - View enhanced image  
-- View tumor prediction result (TYpe of Tumor)
+- View tumor prediction result (Type of Tumor)
 
 ## 🚀 Future Work
 
